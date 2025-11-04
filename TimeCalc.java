@@ -9,33 +9,25 @@ public class TimeCalc {
         int additionalMinutesInt = Integer.parseInt(additionalMinutesString);
 
 
-        System.out.println(hours);
-        System.out.println(minutes);
-        System.out.println(additionalMinutesString);
-
         int totalMinutes = 0;
 
         totalMinutes =  hours * 60  + minutes + additionalMinutesInt ;
         
-        System.out.println(totalMinutes);
         
         int totalHours = totalMinutes / 60;
 
-        System.out.println(totalHours);
 
         int newHours = totalHours % 24;
         
         String formattedHourString = String.format("%02d", newHours);
 
 
-        System.out.println(newHours);
 
         int newMinutes = totalMinutes - totalHours*60 ;
         
         String formattedMinutesString = String.format("%02d", newMinutes);
 
         
-        System.out.println(newMinutes);
 
         System.out.println("" + formattedHourString + ":" + formattedMinutesString );
 

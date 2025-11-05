@@ -2,5 +2,71 @@
 public  class  TestRandom {
 	public static void main(String[]  args) {
 	    // Replace this comment with your code
+		int nTimes = Integer.parseInt(args[0]);
+		System.out.println(nTimes);
+
+		int greaterInt = 0 ;
+		int lessInt = 0;
+
+
+		int i = 0 ;
+		for(i = 0; i < nTimes; i ++){
+			double currentRandom = Math.random();
+			if(currentRandom > 0.5){
+				greaterInt = greaterInt + 1;
+			}else{
+				lessInt = lessInt + 1;
+			}
+		}
+
+
+		System.out.println("> 0.5: " + greaterInt + " times");
+		System.out.println("<= 0.5: " + lessInt + " times");
+
+		if(lessInt != 0){
+			double ratioDouble = (double)greaterInt / (double)lessInt ;
+			System.out.println("Ratio: " + ratioDouble);
+
+		}
+
+
+
+
+		
 	}
 }
+
+
+
+/*
+ * How random is Math.random? (15 Points)
+
+(Dilbert Comic, by Scott Adams, Dilbert © 2018, Andrews McMeel Syndication)
+
+How “good” is Java’s random number generator function Math.random? One possible test is as
+follows: Call Math.random N times, where N is a non-negative integer, and compare the number of
+times the function returned a number greater than 0.5 to the number of times it returned a number
+less than or equal to 0.5. If Math.random generates values between 0 and 1 randomly, we would
+expect the ratio between these two numbers to converge to 1 as N becomes larger.
+The TestRandom program performs this test. Here are some program run examples:
+% java TestRandom 100
+> 0.5: 47 times
+<= 0.5: 53 times
+Ratio: 0.8867924528301887
+% java TestRandom 10000
+> 0.5: 4986 times
+<= 0.5: 5014 times
+Ratio: 0.994415636218588
+% java TestRandom 3
+> 0.5: 3 times
+<= 0.5: 0 times
+The last example illustrates an important edge case: It may be that Math.random() will always
+generate values greater than 0.5 (or less than or equal to 0.5), just like shown in the Dilbert
+cartoon... In that case, we don’t want to calculate the ratio, since this calculation will result with a
+run-time error (do you see why?). Your program must take care of this special case.
+Complete the program’s implementation, and test it on various N values. Make sure that the output
+that your program prints looks exactly like the examples shown above (with different values, of
+course).
+ * 
+ * 
+ */

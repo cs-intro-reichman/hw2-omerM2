@@ -28,7 +28,7 @@ public class Cheers {
                              }
                           }
                           if(isanletter != true ){
-                            System.out.println("Give me a " + currentLetter + ": " + currentLetter + "!" );
+                            System.out.println("Give me a  " + currentLetter + ": " + currentLetter + "!" );
 
                           }
 

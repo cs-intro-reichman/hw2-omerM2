@@ -3,7 +3,6 @@ public  class  TestRandom {
 	public static void main(String[]  args) {
 	    // Replace this comment with your code
 		int nTimes = Integer.parseInt(args[0]);
-		System.out.println(nTimes);
 
 		int greaterInt = 0 ;
 		int lessInt = 0;

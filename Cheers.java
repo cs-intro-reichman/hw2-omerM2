@@ -13,10 +13,6 @@ public class Cheers {
             String number = args[1];
             int intNumber = Integer.parseInt(number);
             int wordLength = word.length();
-
-            System.out.println(word);
-            System.out.println(number);
-            System.out.println(wordLength);
             int i = 0;
             int j = 0;
 

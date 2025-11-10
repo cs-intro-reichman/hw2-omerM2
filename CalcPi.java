@@ -11,22 +11,22 @@ public static void main(String [] args) {
 	int i = 0 ;
 	Double deviderDouble = 1.0 ;
 
-	for(i = 1 ; i < numberInt ; i ++ ){
+	for(i = 0 ; i < numberInt ; i ++ ){
 
 		if(i%2 == 0){
-			//System.out.println("i is equal to: " + i + " and it has no modulo of " + i%2); // זוגי
-			//System.out.println("pi Double is equal to: "+ piDouble);
-			//System.out.println("devider Int is equal to: "+ deviderDouble);
-
-			piDouble = piDouble - (1/deviderDouble);
-			//System.out.println("pi Double is equal to: "+ piDouble);
-			
-		} else{
-			//System.out.println("i is equal to: " + i + " and it has modulo of " + i%2 ); // אי זוגי
+			//System.out.println("i is equal to: " + i + " and it has no modulo of " + i%2); // אי זוגי
 			//System.out.println("pi Double is equal to: "+ piDouble);
 			//System.out.println("devider Int is equal to: "+ deviderDouble);
 
 			piDouble = piDouble + (1/deviderDouble);
+			//System.out.println("pi Double is equal to: "+ piDouble);
+			
+		} else{
+			//System.out.println("i is equal to: " + i + " and it has modulo of " + i%2 ); // זוגי
+			//System.out.println("pi Double is equal to: "+ piDouble);
+			//System.out.println("devider Int is equal to: "+ deviderDouble);
+
+			piDouble = piDouble - (1/deviderDouble);
 			//System.out.println("pi Double is equal to: "+ piDouble);
 		}
 		deviderDouble = deviderDouble + 2 ;
